@@ -1,0 +1,121 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+section {
+	display: grid;
+	max-width: 100vw;
+	font-size: 40px;
+	font-family: "Pacifico";
+	text-align: center;
+	background-color: #f5f5f4;
+	text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+	padding: 0 24px;
+}
+
+.polaroid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 15px;
+}
+
+@media (min-width: 468px) {
+	.polaroid {
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+}
+
+@media (min-width: 768px) {
+	.polaroid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	nav {
+		flex-direction: row;
+	}
+
+	nav img {
+		margin-bottom: 0px;
+	}
+}
+
+.polaroidstyle {
+	display: flex;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0 auto;
+	padding: 5px;
+	flex-flow: column;
+	cursor: pointer;
+	width: 100%;
+	position: relative;
+}
+
+.polaroidstyle > img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+
+.polaroidstyle:hover img {
+	opacity: 0.3;
+}
+
+.polaroidtext {
+	text-align: center;
+	padding: 5px 20px;
+	font-size: 35px;
+}
+
+.divCart {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	z-index: 9;
+}
+
+.polaroidstyle:hover .divCart {
+	opacity: 1;
+}
+
+.buttonAddtocart {
+	background-color: #4caf50;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+	cursor: pointer;
+}
+
+.buttonAddtocart > i {
+	margin-right: 4px;
+}
+
+.galeria-animado {
+	animation-name: galeria-animado;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes galeria-animado {
+	20% {
+		transform: translateX(300px);
+	}
+}

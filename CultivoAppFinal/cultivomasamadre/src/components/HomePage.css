@@ -1,0 +1,85 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+section {
+	font-size: 40px;
+	font-family: "Pacifico";
+	text-align: center;
+	background-color: #f5f5f4;
+	text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+	padding: 0 24px;
+	margin-top: 32px;
+}
+
+.products {
+	padding-top: 80px;
+}
+
+.polaroid {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+	.polaroid {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 24px;
+	}
+
+	nav {
+		flex-direction: row;
+	}
+
+	nav img {
+		margin-bottom: 0;
+	}
+}
+
+.polaroidstyle {
+	display: flex;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 0 auto;
+	padding: 5px;
+	flex-flow: column;
+	cursor: pointer;
+	margin-bottom: 24px;
+	width: 100%;
+}
+
+.polaroidstyle img {
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+}
+
+.polaroidtext {
+	text-align: center;
+	padding: 5px 20px;
+	font-size: 35px;
+}
+
+.polaroidstyle:hover {
+	background-color: #1d3557;
+	color: #ffffff;
+	border-color: white;
+	margin-top: -50px;
+}
+
+p {
+	color: #ffffff;
+}
